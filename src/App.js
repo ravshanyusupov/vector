@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Form from "./components/Form";
+import Profile from "./components/Profile";
+import {Routes, Route, BrowserRouter} from "react-router-dom"
+import BasicModal from "./components/Modal";
+import PrivateRoute from "./Router/PrivateRoute";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <BrowserRouter>
+                <Routes>
+                    <Route element={<PrivateRoute/>}>
+                        <Route path='/profile' element={<Profile/>}/>
+                        <Route path='/:update' element={<BasicModal/>}/>
+                    </Route>
+                    <Route path='/' element={<Form/>} exact/>
+                </Routes>
+            </BrowserRouter>
+        </>
+    );
 }
 
 export default App;
+
+
