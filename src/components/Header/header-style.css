@@ -1,0 +1,56 @@
+.navbar{
+    height: 55px;
+}
+
+.globe{
+    font-size: 22px;
+}
+.globe-btn{
+    border: none;
+}
+.profile{
+    font-size: 25px;
+}
+.profile-btn{
+    border: none;
+}
+.globe-btn:hover{
+    color: red;
+    transition: .5s;
+}
+.home{
+    font-size: 27px;
+}
+.home-btn{
+    border: none;
+}
+
+.home-btn:hover{
+    color: red;
+    transition: .5s;
+}
+.profile-btn:hover{
+    color: red;
+    transition: .5s;
+}
+.navbar-brand{
+    color: red;
+    font-weight: bolder;
+    font-size: 23px;
+}
+.navbar-brand:hover{
+    color: #e77a7a;
+    transition: .5s;
+}
+
+.input-nav{
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    border: 1px black solid;
+}
+
+.input-nav:focus{
+    width: 300px;
+    transition: .9s;
+}
